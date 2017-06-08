@@ -75,15 +75,15 @@ function PlayersManager:PlayerInAllowed(steamId)
   local player = Player(steamId)
   player:Init() -- Get Player data or create is not exit
 
-  if (not player:Get("ban") and player:Get("whitelist")) or (player:Get("permissionLevel") > 0) then
-
-
+  if Config.server.whitelist and not player:Get("whitelist") then
+    return Config.server.noWhitelistMessage
+  elseif not player:Get("ban") then
     self.playerTmp[steamId] = {
       data = player,
     }
-
     return true
   else
-    return false
+    return Config.server.banMessage
   end
+
 end

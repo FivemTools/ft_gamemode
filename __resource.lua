@@ -31,10 +31,10 @@ server_scripts {
   -- Tools --
   "sv_utils.lua",
 
-  -- Player class --
-  "class/sv_player.lua",
-  "class/sv_playersManager.lua",
-  "class/sv_commandsManager.lua",
+  -- Player classes --
+  "classes/sv_player.lua",
+  "classes/sv_playersManager.lua",
+  "classes/sv_commandsManager.lua",
 
    -- Init
   "sv_init.lua",

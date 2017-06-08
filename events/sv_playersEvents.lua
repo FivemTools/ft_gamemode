@@ -3,8 +3,9 @@ AddEventHandler("playerConnecting", function(playerName, setCallback)
   local steamId = getSteamId(source)
   -- Check if player is in player table
 
-  if not PlayersManager:PlayerInAllowed(steamId) then
-    setCallback(Config.server.noWhitelistMessage .. " (steamId: " .. steamId .. ")")
+  local checkAccess = PlayersManager:PlayerInAllowed(steamId)
+  if type(checkAccess) == "string" then
+    setCallback(checkAccess .. " (steamId: " .. steamId .. ")")
     CancelEvent()
     return
   end
