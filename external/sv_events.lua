@@ -21,9 +21,11 @@ end)
 -- Get Player infos
 RegisterServerEvent("ft:SvGetPlayerData")
 AddEventHandler("ft:SvGetPlayerData", function(source, array, callback)
+
   local player = PlayersManager:Get(source)
   local data = player[array]
   callback(data)
+
 end)
 
 -- Set Player data
@@ -43,13 +45,16 @@ end)
 -- Kick player
 RegisterServerEvent("ft:SvKickPlayer")
 AddEventHandler("ft:SvKickPlayer", function(source, reason)
+
   local player = PlayersManager:GetPlayerData(source)
   player:Kick(reason)
+
 end)
 
 -- Event is emited after client is 100% loded games
 RegisterServerEvent('ft:FirstJoinProper')
 AddEventHandler('ft:FirstJoinProper', function()
+
   local steamId = getSteamId(source)
 
   -- Add player in player table
@@ -70,9 +75,8 @@ AddEventHandler('ft:FirstJoinProper', function()
   playerData.createdAt = nil
   playerData.ban = nil
   playerData.whitelist = nil
-  TriggerClientEvent("ft:ClSetPlayerData", source, "data", playerData)
 
-	
+  TriggerClientEvent("ft:ClSetPlayerData", source, "data", playerData)
   TriggerClientEvent('ft:ClientReady', source)
 
 end)

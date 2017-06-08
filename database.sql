@@ -1,6 +1,5 @@
 CREATE TABLE IF NOT EXISTS `players` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `rpName` varchar(255) DEFAULT NULL,
   `steamId` varchar(255) DEFAULT NULL,
   `ban` tinyint(1) NOT NULL DEFAULT '0',
   `whitelist` tinyint(1) NOT NULL DEFAULT '0',
