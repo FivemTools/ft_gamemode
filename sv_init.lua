@@ -1,3 +1,10 @@
+-- @Author: samuelds
+-- @Date:   2017-05-10T23:34:27+02:00
+-- @Project: FiveM Tools
+-- @Last modified by:   samuelds
+-- @Last modified time: 2017-06-08T23:39:23+02:00
+-- @License: GNU General Public License v3.0
+
 -- Load lib MySQL --
 require "resources/mysql-async/lib/MySQL"
 

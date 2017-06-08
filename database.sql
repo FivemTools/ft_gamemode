@@ -1,3 +1,12 @@
+/**
+ * @Author: samuelds
+ * @Date:   2017-06-08T19:15:48+02:00
+ * @Project: FiveM Tools
+ * @Last modified by:   samuelds
+ * @Last modified time: 2017-06-08T23:39:17+02:00
+ * @License: GNU General Public License v3.0
+ */
+
 CREATE TABLE IF NOT EXISTS `players` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `steamId` varchar(255) DEFAULT NULL,

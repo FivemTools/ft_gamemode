@@ -1,3 +1,10 @@
+-- @Author: samuelds
+-- @Date:   2017-05-21T16:44:54+02:00
+-- @Project: FiveM Tools
+-- @Last modified by:   samuelds
+-- @Last modified time: 2017-06-08T23:38:13+02:00
+-- @License: GNU General Public License v3.0
+
 -- Constructor
 PlayersManager = {}
 PlayersManager.__index = PlayersManager

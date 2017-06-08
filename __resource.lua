@@ -1,4 +1,11 @@
-resource_type "gametype" { name = "FiveM Tools v0.1" }
+-- @Author: samuelds
+-- @Date:   2017-05-28T09:34:12+02:00
+-- @Project: FiveM Tools
+-- @Last modified by:   samuelds
+-- @Last modified time: 2017-06-08T23:39:00+02:00
+-- @License: GNU General Public License v3.0
+
+resource_type "gametype" { name = "FiveM Tools v0.3" }
 
 resource_manifest_version "77731fab-63ca-442c-a67b-abc70f28dfa5"
 
@@ -14,10 +21,10 @@ client_scripts {
   -- Init
   "cl_init.lua",
 
-  -- Events --  
+  -- Events --
   "external/cl_players.lua",
 
-  -- Export --  
+  -- Export --
   "external/cl_exports.lua",
 
 
