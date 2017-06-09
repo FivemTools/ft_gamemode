@@ -1,28 +1,34 @@
 -- @Author: samuelds
 -- @Date:   2017-06-07T18:47:34+02:00
 -- @Project: FiveM Tools
--- @Last modified by:   samuelds
--- @Last modified time: 2017-06-08T23:38:51+02:00
+-- @Last modified by:
+-- @Last modified time: 2017-06-09T12:44:48+02:00
 -- @License: GNU General Public License v3.0
 
 -- Register command
 RegisterServerEvent('ft:SvAddCommand')
 AddEventHandler('ft:SvAddCommand', function(prefix, permissionLevel, callback)
+
   CommandsManager:AddCommand(prefix, permissionLevel, callback)
+
 end)
 
 -- Get All players
 RegisterServerEvent("ft:SvGetPlayers")
 AddEventHandler("ft:SvGetPlayers", function(callback)
+
   local players = PlayersManager:GetPlayers()
   callback(players)
+
 end)
 
 -- Get All player data
 RegisterServerEvent("ft:SvGetPlayer")
 AddEventHandler("ft:SvGetPlayer", function(source, callback)
+
   local player = PlayersManager:Get(source)
   callback(player)
+
 end)
 
 -- Get Player infos
@@ -72,9 +78,6 @@ AddEventHandler('ft:FirstJoinProper', function()
   -- Send to player
   local player = PlayersManager:Get(source)
 
-  -- Send source
-  TriggerClientEvent("ft:ClSetPlayerData", source, "source", source)
-
   -- Data
   local playerData = player.data
   playerData = playerData.data
@@ -83,7 +86,11 @@ AddEventHandler('ft:FirstJoinProper', function()
   playerData.ban = nil
   playerData.whitelist = nil
 
-  TriggerClientEvent("ft:ClSetPlayerData", source, "data", playerData)
+  TriggerClientEvent("ft:ClSetPlayerData", source, playerData)
+
+  -- Send source
+  TriggerClientEvent("ft:ClSetPlayerData", source, { source = source })
+
   TriggerClientEvent('ft:ClientReady', source)
 
 end)
