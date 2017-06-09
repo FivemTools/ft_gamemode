@@ -1,87 +1,31 @@
 # ft_gamemode
 
-One Paragraph of project description goes here
-
-## Getting Started
-
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
-
 ### Prerequisites
 
-What things you need to install the software and how to install them
+What things you need to install this script them
 
-```
-Give examples
-```
+[mysql-async](https://github.com/FivemTools/fivem-mysql-async)
 
 ### Installing
 
-A step by step series of examples that tell you have to get a development env running
+Put the folder where you want it and add it to the citmp-server.yml file
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+Example:
 
 ```
-until finished
+- ft_gamemode
 ```
 
-End with an example of getting some data out of the system or using it for a little demo
+Install the content of this repository in the resources/mysql-async folder. Name of the folder matters, do not use a different name (otherwise you must have knowledge on how this works and make the appropriate changes)
 
-## Running the tests
+Copy the file resources/mysql-async/lib/config.lua-dist to resources/mysql-async/lib/config.lua and change the values according to your MySQL installation.
 
-Explain how to run the automated tests for this system
+Import database.sql file to database
 
-### Break down into end to end tests
+### Documentation
 
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags).
-
-## Authors
-
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
-
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+[Wiki](https://github.com/FivemTools/ft_gamemode/wiki)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
-## Acknowledgments
-
-* Hat tip to anyone who's code was used
-* Inspiration
-* etc
+This project is licensed under the GNU General Public License v3.0 - see the [LICENSE.md](LICENSE.md) file for details
