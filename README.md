@@ -16,10 +16,6 @@ Example:
 - ft_gamemode
 ```
 
-Install the content of this repository in the resources/mysql-async folder. Name of the folder matters, do not use a different name (otherwise you must have knowledge on how this works and make the appropriate changes)
-
-Copy the file resources/mysql-async/lib/config.lua-dist to resources/mysql-async/lib/config.lua and change the values according to your MySQL installation.
-
 Import database.sql file to database
 
 ### Documentation

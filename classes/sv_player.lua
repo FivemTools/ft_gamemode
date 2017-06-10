@@ -2,7 +2,7 @@
 -- @Date:   2017-05-28T09:34:12+02:00
 -- @Project: FiveM Tools
 -- @Last modified by:
--- @Last modified time: 2017-06-09T18:34:19+02:00
+-- @Last modified time: 2017-06-10T11:17:34+02:00
 -- @License: GNU General Public License v3.0
 
 -- Constructor
@@ -11,6 +11,7 @@ Player.__index = Player
 
 -- Meta table for users
 setmetatable(Player, {
+
   __call = function(self, steamId, source)
     local p = {}
     p.source = source
@@ -18,6 +19,7 @@ setmetatable(Player, {
     p.data = {}
     return setmetatable(p, Player)
   end
+
 })
 
 -- Get All datas
@@ -91,7 +93,7 @@ function Player:Save(data)
   local count = 0
 
   for column, value in pairs(data) do
-    if column ~= 'id' and column ~= 'steamId' and column ~= 'createdAt' then
+    if column ~= "id" and column ~= "steamId" and column ~= "createdAt" and column ~= "source" then
       if count ~= 0 then
         str_query = str_query .. ", "
       end

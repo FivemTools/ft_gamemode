@@ -2,7 +2,7 @@
 -- @Date:   2017-05-13T19:34:28+02:00
 -- @Project: FiveM Tools
 -- @Last modified by:
--- @Last modified time: 2017-06-09T12:17:24+02:00
+-- @Last modified time: 2017-06-10T17:01:45+02:00
 -- @License: GNU General Public License v3.0
 
 -- Send client
@@ -18,13 +18,11 @@ end)
 -- Set player data
 RegisterNetEvent('ft:ClSetPlayerData')
 AddEventHandler('ft:ClSetPlayerData', function(data)
-  Citizen.CreateThread(function()
 
-    if type(data) == "table" then
-      for name, value in pairs( data ) do
-        Player[name] = value
-      end
+  if type(data) == "table" then
+    for name, value in pairs( data ) do
+      Player[name] = value
     end
+  end
 
-  end)
 end)
