@@ -1,11 +1,9 @@
--- @Author: samuelds
--- @Date:   2017-05-28T09:34:12+02:00
+-- @Date:   2017-06-11T23:18:02+02:00
 -- @Project: FiveM Tools
--- @Last modified by:
--- @Last modified time: 2017-06-10T18:31:18+02:00
+-- @Last modified time: 2017-06-12T17:43:16+02:00
 -- @License: GNU General Public License v3.0
 
-resource_type "gametype" { name = "FiveM Tools v0.6" }
+resource_type "gametype" { name = "FiveMTools v0.7" }
 
 resource_manifest_version "77731fab-63ca-442c-a67b-abc70f28dfa5"
 
@@ -16,7 +14,8 @@ client_scripts {
   "configurations.lua",
 
   -- FiveM events --
-  "events/cl_events.lua",
+  "events/cl_playerEvents.lua",
+  "events/cl_mapEvents.lua",
 
   -- Init
   "cl_init.lua",

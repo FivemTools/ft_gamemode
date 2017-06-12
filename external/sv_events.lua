@@ -1,8 +1,6 @@
--- @Author: samuelds
--- @Date:   2017-06-07T18:47:34+02:00
+-- @Date:   2017-06-11T23:19:46+02:00
 -- @Project: FiveM Tools
--- @Last modified by:
--- @Last modified time: 2017-06-10T18:30:28+02:00
+-- @Last modified time: 2017-06-11T23:19:46+02:00
 -- @License: GNU General Public License v3.0
 
 -- Event is emited after client is 100% loded games

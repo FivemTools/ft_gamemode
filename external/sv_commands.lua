@@ -1,8 +1,6 @@
--- @Author: samuelds
--- @Date:   2017-05-13T19:34:28+02:00
+-- @Date:   2017-06-11T23:19:42+02:00
 -- @Project: FiveM Tools
--- @Last modified by:
--- @Last modified time: 2017-06-09T21:55:20+02:00
+-- @Last modified time: 2017-06-11T23:19:43+02:00
 -- @License: GNU General Public License v3.0
 
 -- Simple command no failed callback

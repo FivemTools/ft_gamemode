@@ -1,8 +1,6 @@
--- @Author: samuelds
--- @Date:   2017-05-21T16:44:54+02:00
+-- @Date:   2017-06-11T23:20:24+02:00
 -- @Project: FiveM Tools
--- @Last modified by:
--- @Last modified time: 2017-06-10T11:30:52+02:00
+-- @Last modified time: 2017-06-11T23:20:26+02:00
 -- @License: GNU General Public License v3.0
 
 -- Constructor

@@ -1,8 +1,6 @@
--- @Author: samuelds
--- @Date:   2017-05-10T23:34:27+02:00
+-- @Date:   2017-06-11T23:20:05+02:00
 -- @Project: FiveM Tools
--- @Last modified by:
--- @Last modified time: 2017-06-10T16:50:56+02:00
+-- @Last modified time: 2017-06-11T23:20:05+02:00
 -- @License: GNU General Public License v3.0
 
 -- Recive chat message

@@ -1,8 +1,6 @@
--- @Author: samuelds
--- @Date:   2017-05-28T09:34:12+02:00
+-- @Date:   2017-06-11T23:20:07+02:00
 -- @Project: FiveM Tools
--- @Last modified by:
--- @Last modified time: 2017-06-10T15:24:42+02:00
+-- @Last modified time: 2017-06-11T23:20:08+02:00
 -- @License: GNU General Public License v3.0
 
 -- Event before player join
