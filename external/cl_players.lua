@@ -1,14 +1,14 @@
 -- @Date:   2017-06-11T23:19:39+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-11T23:19:39+02:00
+-- @Last modified time: 2017-06-13T11:12:40+02:00
 -- @License: GNU General Public License v3.0
 
 -- Send client
-RegisterNetEvent('ft:ClientReady')
-AddEventHandler('ft:ClientReady', function()
+RegisterNetEvent('ft:ClReady')
+AddEventHandler('ft:ClReady', function()
   Citizen.CreateThread(function()
 
-    TriggerEvent('ft:ClientLoaded')
+    TriggerEvent('ft:ClLoaded')
 
   end)
 end)

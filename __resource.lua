@@ -1,9 +1,9 @@
 -- @Date:   2017-06-11T23:18:02+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-12T17:43:16+02:00
+-- @Last modified time: 2017-06-13T11:35:52+02:00
 -- @License: GNU General Public License v3.0
 
-resource_type "gametype" { name = "FiveMTools v0.7" }
+resource_type "gametype" { name = "FiveMTools v0.8" }
 
 resource_manifest_version "77731fab-63ca-442c-a67b-abc70f28dfa5"
 
