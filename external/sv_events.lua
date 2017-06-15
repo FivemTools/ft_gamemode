@@ -1,6 +1,6 @@
 -- @Date:   2017-06-11T23:19:46+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-13T11:12:48+02:00
+-- @Last modified time: 2017-06-15T18:42:45+02:00
 -- @License: GNU General Public License v3.0
 
 -- Event is emited after client is 100% loded games
@@ -10,6 +10,7 @@ AddEventHandler('ft:SvFirstJoinProper', function()
   local steamId = getSteamId(source)
 
   -- Add player in player table
+
   if not PlayersManager:PlayerExistInList(source) then
     PlayersManager:AddPlayerInList(steamId, source)
   end
