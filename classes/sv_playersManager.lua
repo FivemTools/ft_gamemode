@@ -1,6 +1,6 @@
 -- @Date:   2017-06-11T23:20:24+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-15T18:40:19+02:00
+-- @Last modified time: 2017-06-25T15:07:34+02:00
 -- @License: GNU General Public License v3.0
 
 -- Constructor
@@ -85,7 +85,7 @@ function PlayersManager:PlayerInAllowed(steamId)
   local player = Player(steamId)
   player:Init() -- Get Player data or create is not exit
 
-  if Config.server.whitelist and not player:Get("whitelist") then
+  if Config.whitelist ~= nil and Config.whitelist and not player:Get("whitelist") then
     return Config.message.noWhitelist
   elseif not player:Get("ban") then
     self.playerTmp[steamId] = player
