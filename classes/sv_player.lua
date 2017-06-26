@@ -96,12 +96,12 @@ function Player:Save(data)
         str_query = str_query .. ", "
       end
 
-      str_query = str_query .. tostring(column) .. " = '" .. tostring(value) .. "'"
+      str_query = str_query .. tostring(column) .. " = " .. tostring(value)
       count = count + 1
     end
   end
 
-  MySQL.Sync.execute("UPDATE players SET " .. str_query .. " WHERE steamId = '@steamId'", { ['@steamId'] = self.steamId } )
+  MySQL.Sync.execute("UPDATE players SET " .. str_query .. " WHERE steamId = @steamId", { ['@steamId'] = self.steamId } )
 
 end
 
