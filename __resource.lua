@@ -3,7 +3,7 @@
 -- @Last modified time: 2017-06-25T12:06:11+02:00
 -- @License: GNU General Public License v3.0
 
-resource_type "gametype" { name = "FiveMTools v0.10" }
+resource_type "gametype" { name = "FiveMTools v0.10.1" }
 
 resource_manifest_version "77731fab-63ca-442c-a67b-abc70f28dfa5"
 
