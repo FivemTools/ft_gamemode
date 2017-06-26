@@ -35,15 +35,15 @@ AddEventHandler("ft:ClFirstJoinProper", function()
       Citizen.InvokeNative(0xDC0F817884CDD856, 11, false)
     end
 
-    if Config.dispatch.biker ~= nil and Config. dispatch.biker then
+    if Config.dispatch.biker ~= nil and Config.dispatch.biker then
       Citizen.InvokeNative(0xDC0F817884CDD856, 15, false)
     end
 
-    if Config. dispatch.ambulance ~= nil and Config. dispatch.ambulance then
+    if Config.dispatch.ambulance ~= nil and Config.dispatch.ambulance then
       Citizen.InvokeNative(0xDC0F817884CDD856, 5, false)
     end
 
-    if Config.dispatch.fireDepartment ~= nil and Config. dispatch.fireDepartment then
+    if Config.dispatch.fireDepartment ~= nil and Config.dispatch.fireDepartment then
       Citizen.InvokeNative(0xDC0F817884CDD856, 3, false)
     end
 
