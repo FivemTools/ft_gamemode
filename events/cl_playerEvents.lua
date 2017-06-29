@@ -82,6 +82,10 @@ AddEventHandler("ft:ClFirstJoinProper", function()
       if Config.vehicleRewards ~= nil and Config.vehicleRewards then
         DisablePlayerVehicleRewards(playerId)
       end
+          
+      if Config.pedScenario ~= nil and Config.pedScenario then
+		    SetScenarioPedDensityMultiplierThisFrame(0.0, 0.0)
+	    end
 
     end
 
