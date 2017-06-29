@@ -12,6 +12,7 @@ Config = {
   policeIgnores = true, -- Police Ignores You (optional)
   noWantedLevel = true, -- Disable Wanted Level (optional)
   vehicleRewards = true, -- Disable Vehicle Rewards (optional)
+  pedScenario = true, -- Disable Ped Scenario Like (Military/Police/Animal/Gang) (optional)
   traffic = 1.0, -- Vehicle traffic [0.0 - 1.0] (optional)
   pedDensity = 1.0, -- Ped Density [0.0 - 1.0] (optional)
 
