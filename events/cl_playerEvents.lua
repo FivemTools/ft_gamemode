@@ -84,8 +84,8 @@ AddEventHandler("ft:ClFirstJoinProper", function()
       end
           
       if Config.pedScenario ~= nil and Config.pedScenario then
-		    SetScenarioPedDensityMultiplierThisFrame(0.0, 0.0)
-	    end
+	SetScenarioPedDensityMultiplierThisFrame(0.0, 0.0)
+      end
 
     end
 
