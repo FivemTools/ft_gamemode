@@ -1,6 +1,6 @@
 -- @Date:   2017-06-12T11:01:14+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-29T20:25:55+02:00
+-- @Last modified time: 2017-07-02T17:53:05+02:00
 -- @License: GNU General Public License v3.0
 
 AddEventHandler("playerSpawned", function()
@@ -16,7 +16,7 @@ AddEventHandler("playerSpawned", function()
   end)
 end)
 
-AddEventHandler("ft:ClFirstJoinProper", function()
+AddEventHandler("ft_gamemode:ClFirstJoinProper", function()
   Citizen.CreateThread(function()
 
     while true do
@@ -56,7 +56,7 @@ AddEventHandler("ft:ClFirstJoinProper", function()
       end
 
       if Config.pedScenario ~= nil and Config.pedScenario then
-	SetScenarioPedDensityMultiplierThisFrame(0.0, 0.0)
+	     SetScenarioPedDensityMultiplierThisFrame(0.0, 0.0)
       end
 
     end

@@ -1,6 +1,6 @@
 -- @Date:   2017-06-11T23:20:07+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-11T23:20:08+02:00
+-- @Last modified time: 2017-07-02T17:52:33+02:00
 -- @License: GNU General Public License v3.0
 
 -- Event before player join
@@ -14,6 +14,8 @@ AddEventHandler("playerConnecting", function(playerName, setCallback)
     setCallback(checkAccess .. " (steamId: " .. steamId .. ")")
     CancelEvent()
     return
+  else
+    TriggerEvent('ft_gamemode:ClFirstJoinProper')
   end
 
 end)

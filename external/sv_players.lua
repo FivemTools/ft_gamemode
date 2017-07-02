@@ -1,11 +1,11 @@
 -- @Date:   2017-06-11T23:19:49+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-11T23:19:50+02:00
+-- @Last modified time: 2017-07-02T17:54:13+02:00
 -- @License: GNU General Public License v3.0
 
 -- Get All players
-RegisterServerEvent("ft:SvGetPlayers")
-AddEventHandler("ft:SvGetPlayers", function(callback)
+RegisterServerEvent("ft_gamemode:SvGetPlayers")
+AddEventHandler("ft_gamemode:SvGetPlayers", function(callback)
 
   local players = PlayersManager:GetPlayers()
   callback(players)
@@ -13,8 +13,8 @@ AddEventHandler("ft:SvGetPlayers", function(callback)
 end)
 
 -- Get All player data
-RegisterServerEvent("ft:SvGetPlayer")
-AddEventHandler("ft:SvGetPlayer", function(source, callback)
+RegisterServerEvent("ft_gamemode:SvGetPlayer")
+AddEventHandler("ft_gamemode:SvGetPlayer", function(source, callback)
 
   local player = PlayersManager:Get(source)
   callback(player)
@@ -22,8 +22,8 @@ AddEventHandler("ft:SvGetPlayer", function(source, callback)
 end)
 
 -- Get Player infos
-RegisterServerEvent("ft:SvGetPlayerData")
-AddEventHandler("ft:SvGetPlayerData", function(source, name, callback)
+RegisterServerEvent("ft_gamemode:SvGetPlayerData")
+AddEventHandler("ft_gamemode:SvGetPlayerData", function(source, name, callback)
 
   local player = PlayersManager:Get(source)
   local data = player[name]
@@ -32,19 +32,19 @@ AddEventHandler("ft:SvGetPlayerData", function(source, name, callback)
 end)
 
 -- Set Player data
-RegisterServerEvent("ft:SvSetPlayerData")
-AddEventHandler("ft:SvSetPlayerData", function(source, data)
+RegisterServerEvent("ft_gamemode:SvSetPlayerData")
+AddEventHandler("ft_gamemode:SvSetPlayerData", function(source, data)
 
   -- Send to client
-  TriggerClientEvent("ft:ClSetPlayerData", source, data)
+  TriggerClientEvent("ft_gamemode:ClSetPlayerData", source, data)
   local player = PlayersManager:Get(source)
   player:Set(data)
 
 end)
 
 -- Kick player
-RegisterServerEvent("ft:SvKickPlayer")
-AddEventHandler("ft:SvKickPlayer", function(source, reason)
+RegisterServerEvent("ft_gamemode:SvKickPlayer")
+AddEventHandler("ft_gamemode:SvKickPlayer", function(source, reason)
 
   local player = PlayersManager:Get(source)
   player:Kick(reason)

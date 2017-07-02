@@ -1,6 +1,6 @@
 -- @Date:   2017-05-10T23:34:27+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-29T20:25:44+02:00
+-- @Last modified time: 2017-07-02T17:57:25+02:00
 -- @License: GNU General Public License v3.0
 
 Config = {
@@ -13,8 +13,8 @@ Config = {
   noWantedLevel = true, -- Disable Wanted Level (optional)
   vehicleRewards = true, -- Disable Vehicle Rewards (optional)
   pedScenario = true, -- Disable Ped Scenario Like (Military/Police/Animal/Gang) (optional)
-  traffic = 1.0, -- Vehicle traffic [0.0 - 1.0] (optional)
-  pedDensity = 1.0, -- Ped Density [0.0 - 1.0] (optional)
+  traffic = 0.5, -- Vehicle traffic [0.0 - 1.0] (optional)
+  pedDensity = 0.5, -- Ped Density [0.0 - 1.0] (optional)
 
   -- Custom message
   message = {

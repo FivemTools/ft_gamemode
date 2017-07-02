@@ -1,11 +1,10 @@
 -- @Date:   2017-06-11T23:19:46+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-15T18:42:45+02:00
+-- @Last modified time: 2017-07-02T17:53:51+02:00
 -- @License: GNU General Public License v3.0
 
 -- Event is emited after client is 100% loded games
-RegisterServerEvent('ft:SvFirstJoinProper')
-AddEventHandler('ft:SvFirstJoinProper', function()
+AddEventHandler('ft_gamemode:SvFirstJoinProper', function()
 
   local steamId = getSteamId(source)
 
@@ -25,9 +24,9 @@ AddEventHandler('ft:SvFirstJoinProper', function()
   playerData.source = player.source
 
   -- Send to player client
-  TriggerClientEvent("ft:ClSetPlayerData", source, playerData)
+  TriggerClientEvent("ft_gamemode:ClSetPlayerData", source, playerData)
 
   -- Send client ready
-  TriggerClientEvent('ft:ClReady', source)
+  TriggerClientEvent('ft_gamemode:ClReady', source)
 
 end)
