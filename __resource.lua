@@ -39,13 +39,6 @@ server_scripts {
   -- Init
   "server/sv_init.lua",
 
-  -- FiveM events
-  "server/sv_playersEvents.lua",
-  "server/sv_chatEvents.lua",
-
-  -- Events
-  "server/sv_events.lua",
-
 }
 
 exports {
