@@ -14,13 +14,13 @@ client_scripts {
   "client/cl_mapEvents.lua",
 
   -- Init
-  "cl_init.lua",
+  "client/cl_init.lua",
 
   -- Events --
-  "external/cl_players.lua",
+  "client/cl_players.lua",
 
   -- Export --
-  "external/cl_exports.lua",
+  "client/cl_exports.lua",
 
 }
 
@@ -29,7 +29,7 @@ server_scripts {
   "configurations.lua", -- Configuration file
 
   -- Tools
-  "sv_utils.lua",
+  "server/sv_utils.lua",
 
   -- Player classes
   "server/sv_player.lua",
@@ -37,15 +37,15 @@ server_scripts {
   "server/sv_commands.lua",
 
   -- Init
-  "sv_init.lua",
+  "server/sv_init.lua",
 
   -- FiveM events
-  "events/sv_playersEvents.lua",
-  "events/sv_chatEvents.lua",
+  "server/sv_playersEvents.lua",
+  "server/sv_chatEvents.lua",
 
   -- Events
-  "external/sv_players.lua",
-  "external/sv_events.lua",
+  "server/sv_players.lua",
+  "server/sv_events.lua",
 
 }
 
