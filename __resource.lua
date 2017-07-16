@@ -5,11 +5,9 @@ resource_type "gametype" { name = "FiveMTools v0.13.0" }
 
 resource_manifest_version "77731fab-63ca-442c-a67b-abc70f28dfa5"
 
--- Scripts
 client_scripts {
 
-  -- Configurations --
-  "configurations.lua",
+  "configurations.lua", -- Configuration file
 
   -- FiveM events --
   "events/cl_playerEvents.lua",
@@ -28,26 +26,24 @@ client_scripts {
 
 server_scripts {
 
-  -- Configurations --
-  "configurations.lua",
+  "configurations.lua", -- Configuration file
 
-  -- Tools --
+  -- Tools
   "sv_utils.lua",
 
-  -- Player classes --
+  -- Player classes
   "server/sv_player.lua",
   "server/sv_players.lua",
   "server/sv_commands.lua",
 
-   -- Init
+  -- Init
   "sv_init.lua",
 
-  -- FiveM events --
+  -- FiveM events
   "events/sv_playersEvents.lua",
   "events/sv_chatEvents.lua",
 
-  -- Events --
-  "external/sv_commands.lua",
+  -- Events
   "external/sv_players.lua",
   "external/sv_events.lua",
 

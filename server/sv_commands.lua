@@ -1,30 +1,32 @@
--- @Date:   2017-06-11T23:20:17+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-11T23:20:18+02:00
 -- @License: GNU General Public License v3.0
 
 -- Constructor
-CommandsManager = {}
-CommandsManager.__index = CommandsManager
-
--- Meta table for users
-setmetatable(CommandsManager, {
-
-  __call = function(self)
-    local p = {}
-    p.commands = {}
-    return setmetatable(p, CommandsManager)
-  end
-
-})
+Commands = {}
 
 -- Add commande
-function CommandsManager:AddCommand(prefix, permissionLevel, callback, callbackFailed)
+function AddCommand(prefix, permissionLevel, callback, callbackFailed)
 
-  self.commands[prefix] = {
+  Commands[prefix] = {
     permissionLevel = permissionLevel, -- Min permision for use this command
     callback = callback, -- Function success
     callbackFailed = callbackFailed, -- Function failed
   }
 
 end
+
+-- Simple command no failed callback
+RegisterServerEvent('ft_gamemode:SvAddSimpleCommand')
+AddEventHandler('ft_gamemode:SvAddSimpleCommand', function(prefix, permissionLevel, callback)
+
+  AddCommand(prefix, permissionLevel, callback, "")
+
+end)
+
+-- AdvancedC command failed callback
+RegisterServerEvent('ft_gamemode:SvAddAdvancedCommand')
+AddEventHandler('ft_gamemode:SvAddCommand', function(prefix, permissionLevel, callback, callbackfailed)
+
+  AddCommand(prefix, permissionLevel, callback, callbackfailed)
+
+end)
