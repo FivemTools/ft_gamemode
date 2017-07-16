@@ -22,7 +22,7 @@ AddEventHandler('chatMessage', function(source, n, message)
       if command.permissionLevel ~= nil then
 
         local player = GetPlayer(source)
-        if (player:Get("permissionLevel") >= command.permissionLevel) then
+        if (player.Get("permissionLevel") >= command.permissionLevel) then
           command.callback(source, commandArgs)
         elseif (command.callbackFailed ~= nil and command.callbackFailed ~= '') then
           command.callbackfailed(source, commandName)
