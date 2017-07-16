@@ -6,7 +6,7 @@ Players = {}
 TmpPlayers = {}
 
 -- Get All players
-function PlayersManager:GetPlayers()
+function GetPlayers()
 
   return Players
 
