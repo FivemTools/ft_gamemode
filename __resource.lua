@@ -1,9 +1,7 @@
--- @Date:   2017-06-11T23:18:02+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-25T12:06:11+02:00
 -- @License: GNU General Public License v3.0
 
-resource_type "gametype" { name = "FiveMTools v0.10.1" }
+resource_type "gametype" { name = "FiveMTools v0.13.0" }
 
 resource_manifest_version "77731fab-63ca-442c-a67b-abc70f28dfa5"
 
@@ -37,9 +35,9 @@ server_scripts {
   "sv_utils.lua",
 
   -- Player classes --
-  "classes/sv_player.lua",
-  "classes/sv_playersManager.lua",
-  "classes/sv_commandsManager.lua",
+  "server/sv_player.lua",
+  "server/sv_players.lua",
+  "server/sv_commands.lua",
 
    -- Init
   "sv_init.lua",
