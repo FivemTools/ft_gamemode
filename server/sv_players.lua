@@ -1,49 +1,44 @@
--- @Date:   2017-06-11T23:19:49+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-07-02T17:54:13+02:00
 -- @License: GNU General Public License v3.0
 
 -- Constructor
-PlayersManager = {}
-PlayersManager.__index = PlayersManager
-
--- Meta table for users
-setmetatable(PlayersManager, {
-
-  __call = function(self)
-    local p = {}
-    p.players = {}
-    p.playerTmp = {}
-    return setmetatable(p, PlayersManager)
-  end
-
-})
+Players = {}
+TmpPlayers = {}
 
 -- Get All players
 function PlayersManager:GetPlayers()
 
-  return self.players
+  return Players
 
 end
 
 -- Get Player infos
-function PlayersManager:Get(source)
+function GetPlayer(source)
 
-  return self.players[source]
+  return Players[source]
+
+end
+
+-- Add Player in player list
+function AddPlayer(steamId, source)
+
+  Players[source] = TmpPlayers[steamId]
+  Players[source].source = source
+  TmpPlayers[steamId] = nil
 
 end
 
 -- Remove for the list player
-function PlayersManager:RemovePlayerInList(source)
+function RemovePlayer(source)
 
-  self.players[source] = nil
+  Players[source] = nil
 
 end
 
 -- Check if is in the list player
-function PlayersManager:PlayerExistInList(source)
+function PlayerExist(source)
 
-  if (self.players[source] == nil) then
+  if (Players[source] == nil) then
     return false
   else
     return true
@@ -52,9 +47,9 @@ function PlayersManager:PlayerExistInList(source)
 end
 
 -- Check if is in the list player
-function PlayersManager:PlayerExistInTmpList(source)
+function TmpPlayerExist(source)
 
-  if (self.playerTmp[source] == nil) then
+  if (TmpPlayers[source] == nil) then
     return false
   else
     return true
@@ -63,23 +58,14 @@ function PlayersManager:PlayerExistInTmpList(source)
 end
 
 -- Remove int Tmp list
-function PlayersManager:RemovePlayerInTmpList(source)
+function RemoveTmpPlayer(source)
 
-  self.playerTmp[source] = nil
-
-end
-
--- Add Player in player list
-function PlayersManager:AddPlayerInList(steamId, source)
-
-  self.players[source] = self.playerTmp[steamId]
-  self.players[source].source = source
-  self.playerTmp[steamId] = nil
+  TmpPlayers[source] = nil
 
 end
 
 -- Check if player is allowed for
-function PlayersManager:PlayerInAllowed(steamId)
+function PlayerIsAllowed(steamId)
 
   -- Player
   local player = Player(steamId)
@@ -88,7 +74,7 @@ function PlayersManager:PlayerInAllowed(steamId)
   if Config.whitelist ~= nil and Config.whitelist and not player:Get("whitelist") then
     return Config.message.noWhitelist
   elseif not player:Get("ban") then
-    self.playerTmp[steamId] = player
+    TmpPlayers[steamId] = player
     return true
   else
     return Config.message.ban
@@ -100,7 +86,7 @@ end
 RegisterServerEvent("ft_gamemode:SvGetPlayers")
 AddEventHandler("ft_gamemode:SvGetPlayers", function(callback)
 
-  local players = PlayersManager:GetPlayers()
+  local players = GetPlayers()
   callback(players)
 
 end)
@@ -109,7 +95,7 @@ end)
 RegisterServerEvent("ft_gamemode:SvGetPlayer")
 AddEventHandler("ft_gamemode:SvGetPlayer", function(source, callback)
 
-  local player = PlayersManager:Get(source)
+  local player = GetPlayer(source)
   callback(player)
 
 end)
@@ -118,7 +104,7 @@ end)
 RegisterServerEvent("ft_gamemode:SvGetPlayerData")
 AddEventHandler("ft_gamemode:SvGetPlayerData", function(source, name, callback)
 
-  local player = PlayersManager:Get(source)
+  local player = GetPlayer(source)
   local data = player[name]
   callback(data)
 
@@ -130,7 +116,7 @@ AddEventHandler("ft_gamemode:SvSetPlayerData", function(source, data)
 
   -- Send to client
   TriggerClientEvent("ft_gamemode:ClSetPlayerData", source, data)
-  local player = PlayersManager:Get(source)
+  local player = GetPlayer(source)
   player:Set(data)
 
 end)
@@ -139,7 +125,7 @@ end)
 RegisterServerEvent("ft_gamemode:SvKickPlayer")
 AddEventHandler("ft_gamemode:SvKickPlayer", function(source, reason)
 
-  local player = PlayersManager:Get(source)
+  local player = GetPlayer(source)
   player:Kick(reason)
 
 end)
