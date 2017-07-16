@@ -69,11 +69,11 @@ function PlayerIsAllowed(steamId)
 
   -- Player
   local player = Player(steamId)
-  player:Init() -- Get Player data or create is not exit
+  player.Init() -- Get Player data or create is not exit
 
-  if Config.whitelist ~= nil and Config.whitelist and not player:Get("whitelist") then
+  if Config.whitelist ~= nil and Config.whitelist and not player.Get("whitelist") then
     return Config.message.noWhitelist
-  elseif not player:Get("ban") then
+  elseif not player.Get("ban") then
     TmpPlayers[steamId] = player
     return true
   else
@@ -117,7 +117,7 @@ AddEventHandler("ft_gamemode:SvSetPlayerData", function(source, data)
   -- Send to client
   TriggerClientEvent("ft_gamemode:ClSetPlayerData", source, data)
   local player = GetPlayer(source)
-  player:Set(data)
+  player.Set(data)
 
 end)
 
@@ -126,6 +126,6 @@ RegisterServerEvent("ft_gamemode:SvKickPlayer")
 AddEventHandler("ft_gamemode:SvKickPlayer", function(source, reason)
 
   local player = GetPlayer(source)
-  player:Kick(reason)
+  player.Kick(reason)
 
 end)
