@@ -44,7 +44,6 @@ server_scripts {
   "server/sv_chatEvents.lua",
 
   -- Events
-  "server/sv_players.lua",
   "server/sv_events.lua",
 
 }
