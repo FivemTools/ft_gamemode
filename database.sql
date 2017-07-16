@@ -11,7 +11,6 @@ CREATE TABLE IF NOT EXISTS `players` (
   `ban` tinyint(1) NOT NULL DEFAULT '0',
   `whitelist` tinyint(1) NOT NULL DEFAULT '0',
   `permissionLevel` int(1) NOT NULL DEFAULT '0',
-  `role` int(1) NOT NULL DEFAULT '0',
   `createdAt` datetime DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `steamId` (`steamId`)
