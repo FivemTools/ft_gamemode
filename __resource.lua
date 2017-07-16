@@ -10,8 +10,8 @@ client_scripts {
   "configurations.lua", -- Configuration file
 
   -- FiveM events --
-  "events/cl_playerEvents.lua",
-  "events/cl_mapEvents.lua",
+  "client/cl_playerEvents.lua",
+  "client/cl_mapEvents.lua",
 
   -- Init
   "cl_init.lua",
