@@ -1,6 +1,4 @@
--- @Date:   2017-06-12T11:01:14+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-07-02T17:53:05+02:00
 -- @License: GNU General Public License v3.0
 
 AddEventHandler("playerSpawned", function()

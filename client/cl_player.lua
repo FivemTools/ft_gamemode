@@ -1,6 +1,4 @@
--- @Date:   2017-06-11T23:19:39+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-07-02T17:53:18+02:00
 -- @License: GNU General Public License v3.0
 
 -- Send client
@@ -24,3 +22,21 @@ AddEventHandler('ft_gamemode:ClSetPlayerData', function(data)
   end
 
 end)
+
+-- Get all data in player client
+function GetPlayerData(name)
+
+  if name ~= nil then
+    return Player[name]
+  else
+    return Player
+  end
+
+end
+
+-- Set data in player client
+function SetPlayerData(name, value)
+
+  Player[name] = value
+
+end

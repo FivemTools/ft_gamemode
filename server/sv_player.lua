@@ -1,6 +1,4 @@
--- @Date:   2017-06-11T23:20:20+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-11T23:20:21+02:00
 -- @License: GNU General Public License v3.0
 
 -- Constructor
@@ -22,7 +20,6 @@ function Player (steamId, source)
     return self.data[name]
 
   end
-
 
   self.Set = function(data)
 
