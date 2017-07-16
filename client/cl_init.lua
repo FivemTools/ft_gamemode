@@ -1,6 +1,4 @@
--- @Date:   2017-05-28T09:34:12+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-07-02T17:52:43+02:00
 -- @License: GNU General Public License v3.0
 
 -- Init player --
@@ -26,4 +24,14 @@ Citizen.CreateThread(function()
       break
     end
   end
+end)
+
+-- Spawn override
+AddEventHandler('onClientMapStart', function()
+  Citizen.CreateThread(function()
+
+    exports.spawnmanager:setAutoSpawn(true)
+    exports.spawnmanager:forceRespawn()
+
+  end)
 end)

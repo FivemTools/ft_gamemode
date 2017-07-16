@@ -1,7 +1,36 @@
--- @Date:   2017-06-11T23:20:05+02:00
 -- @Project: FiveM Tools
--- @Last modified time: 2017-06-15T18:39:19+02:00
 -- @License: GNU General Public License v3.0
+
+-- Load lib MySQL --
+require "resources/mysql-async/lib/MySQL"
+
+-- Event is emited after client is 100% loded games
+RegisterServerEvent("ft_gamemode:SvFirstJoinProper")
+AddEventHandler('ft_gamemode:SvFirstJoinProper', function()
+
+  local steamId = getSteamId(source)
+
+  -- Add player in player table
+  if not PlayerExist(source) then
+    AddPlayer(steamId, source)
+  end
+
+  -- Send to player
+  local player = GetPlayer(source)
+  playerData = player.data
+  playerData.steamId = nil
+  playerData.createdAt = nil
+  playerData.ban = nil
+  playerData.whitelist = nil
+  playerData.source = player.source
+
+  -- Send to player client
+  TriggerClientEvent("ft_gamemode:ClSetPlayerData", source, playerData)
+
+  -- Send client ready
+  TriggerClientEvent('ft_gamemode:ClReady', source)
+
+end)
 
 -- Recive chat message
 AddEventHandler('chatMessage', function(source, n, message)
@@ -14,7 +43,7 @@ AddEventHandler('chatMessage', function(source, n, message)
     -- Get name commande
     local commandName = string.gsub(commandArgs[1], "/", "")
     -- Get command
-    local command = CommandsManager.commands[commandName]
+    local command = Commands[commandName]
     -- Remove command name
     table.remove(commandArgs, 1)
 
@@ -23,8 +52,8 @@ AddEventHandler('chatMessage', function(source, n, message)
 
       if command.permissionLevel ~= nil then
 
-        local player = PlayersManager:Get(source)
-        if (player:Get("permissionLevel") >= command.permissionLevel) then
+        local player = GetPlayer(source)
+        if (player.Get("permissionLevel") >= command.permissionLevel) then
           command.callback(source, commandArgs)
         elseif (command.callbackFailed ~= nil and command.callbackFailed ~= '') then
           command.callbackfailed(source, commandName)
