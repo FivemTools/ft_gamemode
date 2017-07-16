@@ -14,7 +14,7 @@ AddEventHandler('chatMessage', function(source, n, message)
     -- Get name commande
     local commandName = string.gsub(commandArgs[1], "/", "")
     -- Get command
-    local command = CommandsManager.commands[commandName]
+    local command = Commands[commandName]
     -- Remove command name
     table.remove(commandArgs, 1)
 
