@@ -32,8 +32,7 @@ exports {
 
 }
 
-
-server_export {
+server_exports {
 
   "AddCommand",
   "GetPlayers",
