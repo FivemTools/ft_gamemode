@@ -1,9 +1,6 @@
 -- @Project: FiveM Tools
 -- @License: GNU General Public License v3.0
 
--- Load lib MySQL --
-require "resources/mysql-async/lib/MySQL"
-
 -- Event is emited after client is 100% loded games
 RegisterServerEvent("ft_gamemode:SvFirstJoinProper")
 AddEventHandler('ft_gamemode:SvFirstJoinProper', function()
