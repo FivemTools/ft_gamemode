@@ -1,7 +1,7 @@
 -- @Project: FiveM Tools
 -- @License: GNU General Public License v3.0
 
-resource_type "gametype" { name = "FiveMTools v0.13.0" }
+resource_type "gametype" { name = "FiveMTools v0.14.1" }
 
 resource_manifest_version "77731fab-63ca-442c-a67b-abc70f28dfa5"
 
