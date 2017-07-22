@@ -46,9 +46,7 @@ AddEventHandler('chatMessage', function(source, n, message)
 
     -- Check if command exite
     if command ~= nil then
-
       if command.permissionLevel ~= nil then
-
         local player = GetPlayer(source)
         if (player.Get("permissionLevel") >= command.permissionLevel) then
           command.callback(source, commandArgs)
@@ -59,7 +57,8 @@ AddEventHandler('chatMessage', function(source, n, message)
         end
 
       end
-
+    else
+      TriggerClientEvent('chatMessage', source, 'SYSTEM', {255, 0, 0}, Config.message.notFoundCommand)
     end
 
     CancelEvent()
