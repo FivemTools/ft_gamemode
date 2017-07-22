@@ -15,6 +15,7 @@ client_scripts {
 
 server_scripts {
 
+  "@mysql-async/lib/MySQL.lua", -- Load mysql-async
   "configurations.lua", -- Configuration file
   "server/sv_utils.lua", -- Utils
   "server/sv_player.lua", -- Player manager
@@ -28,5 +29,15 @@ exports {
 
   "SetPlayerData",
   "GetPlayerData",
+
+}
+
+
+server_export {
+
+  "AddCommand",
+  "GetPlayers",
+  "GetPlayer",
+  "PlayerExist",
 
 }

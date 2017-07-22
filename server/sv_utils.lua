@@ -2,7 +2,7 @@
 -- @License: GNU General Public License v3.0
 
 -- Get SteamId
-function getSteamId (source)
+function getSteamId(source)
 
   local identifiers = GetPlayerIdentifiers(source)
   return identifiers[1]
@@ -10,7 +10,7 @@ function getSteamId (source)
 end
 
 -- Get first character
-function firstString (String, Compare)
+function firstString(String, Compare)
 
   if (string.sub(String, 1, string.len(Compare)) == Compare) then
     return true
@@ -21,7 +21,7 @@ function firstString (String, Compare)
 end
 
 -- Explod string
-function stringSplit (self, delimiter)
+function stringSplit(self, delimiter)
   if sep == nil then
       sep = "%s"
   end
