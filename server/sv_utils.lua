@@ -21,7 +21,7 @@ function firstString(String, Compare)
 end
 
 -- Explod string
-function stringSplit(self, delimiter)
+function stringSplit(inputstr, delimiter)
   if sep == nil then
       sep = "%s"
   end
