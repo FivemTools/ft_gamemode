@@ -13,6 +13,7 @@ Config = {
   pedScenario = true, -- Disable Ped Scenario Like (Military/Police/Animal/Gang) (optional)
   traffic = 0.5, -- Vehicle traffic [0.0 - 1.0] (optional)
   pedDensity = 0.5, -- Ped Density [0.0 - 1.0] (optional)
+  spawn = true, -- Use default spawn system
 
   -- Custom message
   message = {
