@@ -4,23 +4,30 @@
 
 What things you need to install this script them
 
-[mysql-async](https://github.com/FivemTools/fivem-mysql-async)
+[mysql-async](https://github.com/brouznouf/fivem-mysql-async)
 
 ### Installing
 
-Put the folder where you want it and add it to the citmp-server.yml file
+Put the folder where you want it and add it to the server.cfg file :
 
 Example:
 
 ```
-- ft_gamemode
+start ft_gamemode
+```
+
+Change gametype to map ressource :
+
+```lua
+resource_type 'map' { gameTypes = { ft_gamemode = true } }
 ```
 
 Import database.sql file to database
 
+
 ### Documentation
 
-[Wiki](https://github.com/FivemTools/ft_gamemode/wiki)
+[Wiki](https://fivemtools.readme.io/)
 
 ## License
 
