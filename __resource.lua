@@ -10,6 +10,7 @@ client_scripts {
   "configurations.lua", -- Configuration file
   "client/cl_init.lua", -- Init Client
   "client/cl_player.lua", -- Player
+  "client/cl_playerEvents.lua", -- Player events
 
 }
 
