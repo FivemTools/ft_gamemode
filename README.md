@@ -4,7 +4,7 @@
 
 What things you need to install this script them
 
-[mysql-async](https://github.com/brouznouf/fivem-mysql-async)
+[ft_player](https://github.com/fivemtools/ft_players)
 
 ### Installing
 
@@ -21,9 +21,6 @@ Change gametype to map ressource :
 ```lua
 resource_type 'map' { gameTypes = { ft_gamemode = true } }
 ```
-
-Import database.sql file to database
-
 
 ### Documentation
 
