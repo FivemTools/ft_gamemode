@@ -15,12 +15,4 @@ Config = {
   pedDensity = 0.5, -- Ped Density [0.0 - 1.0] (optional)
   spawn = true, -- Use default spawn system
 
-  -- Custom message
-  message = {
-    noWhitelist = "This is a private server. Ask the administrator.",
-    ban = "You are banned from this server !",
-    notPermissionLevel = "You do not have permission to use this command.",
-    notFoundCommand = "Command not found.",
-  },
-
 }
